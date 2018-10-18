@@ -30,17 +30,8 @@ while(True):
 		print("   3      Potato        Rs 33/kg")
 		print("   4      Banana        Rs 99/kg")
 		print("   5      Apple         Rs 90/set")
-		print("For adding into the kart enter in the format itemno space quantity")
-		print("Enter exit to exit the category")
-		while(True):
-			y=input()
-			if(y=="exit"):
-				break
-			else:
-				z=list(map(int,y.split()))
-				kart.append(a[z[0]-1])
-				quantity.append(z[1])
-				price.append(z[1]*b[z[0]-1])
+		p=a
+		q=b
 	elif(int(y)==2):
 		print("Bakery,Meat")
 		print("ITEM NO   ITEM NAME     PRICE")
@@ -51,15 +42,8 @@ while(True):
 		print("   5      Eggs          Rs 50/set")
 		print("For adding into the kart enter in the format itemno space quantity")
 		print("Enter exit to exit the category")
-		while(True):
-			y=input()
-			if(y=="exit"):
-				break
-			else:
-				z=list(map(int,y.split()))
-				kart.append(c[z[0]-1])
-				quantity.append(z[1])
-				price.append(z[1]*d[z[0]-1])
+		p=c
+		q=d
 	elif(int(y)==3):
 		print("Beverages")
 		print("ITEM NO   ITEM NAME     PRICE")
@@ -68,17 +52,8 @@ while(True):
 		print("   3      Soft drink    Rs 33/300ml")
 		print("   4      Cool drink    Rs 90/2l")
 		print("   5      Water         Rs 20/0.5l")
-		print("For adding into the kart enter in the format itemno space quantity")
-		print("Enter exit to exit the category")
-		while(True):
-			y=input()
-			if(y=="exit"):
-				break
-			else:
-				z=list(map(int,y.split()))
-				kart.append(e[z[0]-1])
-				quantity.append(z[1])
-				price.append(z[1]*f[z[0]-1])
+		p=e
+		q=f
 	elif(int(y)==4):
 		print("Snacks")
 		print("ITEM NO   ITEM NAME     PRICE")
@@ -87,17 +62,8 @@ while(True):
 		print("   3      Chips        Rs 20/kg")
 		print("   4      Chocolate    Rs 35")
 		print("   5      Ice cream    Rs 200/kg")
-		print("For adding into the kart enter in the format itemno space quantity")
-		print("Enter exit to exit the category")
-		while(True):
-			y=input()
-			if(y=="exit"):
-				break
-			else:
-				z=list(map(int,y.split()))
-				kart.append(g[z[0]-1])
-				quantity.append(z[1])
-				price.append(z[1]*h[z[0]-1])
+		p=g
+		q=h
 	elif(int(y)==5):
 		print("Beauty&Hygiene")
 		print("ITEM NO   ITEM NAME     PRICE")
@@ -106,17 +72,19 @@ while(True):
 		print("   3      Shampoo      Rs 150")
 		print("   4      Handwash     Rs 99")
 		print("   5      Powder       Rs 80")
-		print("For adding into the kart enter in the format itemno space quantity")
-		print("Enter exit to exit the category")
-		while(True):
-			y=input()
-			if(y=="exit"):
-				break
-			else:
-				z=list(map(int,y.split()))
-				kart.append(i[z[0]-1])
-				quantity.append(z[1])
-				price.append(z[1]*j[z[0]-1])	      
+		p=i
+		q=j
+	print("For adding into the kart enter in the format itemno space quantity")
+	print("Enter exit to exit the category")
+	while(True):
+		y=input()
+		if(y=="exit"):
+			break
+		else:
+			z=list(map(int,y.split()))
+			kart.append(p[z[0]-1])
+			quantity.append(z[1])
+			price.append(z[1]*q[z[0]-1])	      
 for i in range(0,len(kart)):
 	print(str(i+1)+" "+kart[i]+" "+str(quantity[i])+" "+str(price[i]))
 print(" ")
