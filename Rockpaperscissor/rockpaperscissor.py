@@ -1,6 +1,6 @@
 from PIL import Image
 import random
-print("Lets play rock paper scissor")
+print("Lets play rock-paper-scissors")
 print("You vs Computer")
 a=["rock","paper","scissor"]
 x=0
